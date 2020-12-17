@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lev Korsy</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"
+    />
+
+    <link rel="stylesheet" href="main-stoled.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+    <script src="/pt.min.js"></script>
+    <script src="/index.js"></script>
+    <script src="/modal.js"></script>
+  </head>
+  <body data-new-gr-c-s-check-loaded="14.981.0">
+    <div class="overflow-wrap">
+      <!-- HOME -->
+      <div class="modal-wrap flex">
+        <div class="mask"></div>
+        <div class="modal" id="modal" style="max-width: 700px">
+          <div class="carousel-wrap" style="width: 700px">
+            <div class="window">
+              <div id="carousel" style="left: -700px">
+                <div class="slide" style="width: 700px"></div>
+                <div class="slide" style="width: 700px"></div>
+                <div class="slide" style="width: 700px"></div>
+              </div>
+              <i class="mdi mdi-chevron-left" id="prev">
+                <i class="fas fa-chevron-left" ></i>
+              </i>
+              <i class="mdi mdi-chevron-right" id="next"><i class="fas fa-chevron-right" ></i></i>
+            </div>
+          </div>
+          <div class="info-box">
+            <div class="title"></div>
+            <div class="tag"></div>
+            <div class="detail"></div>
+            <a href="#" target="_blank"
+              ><div class="button">
+                <i class="mdi mdi-open-in-new"></i>VIEW SITE
+              </div></a
+            >
+          </div>
+          <i class="close mdi mdi-close"></i>
+        </div>
+      </div>
+
+      <section id="home" class="flex height-fix">
+        <div id="pt" class="canvas">
+          <canvas
+            id="canvas"
+            width="1920"
+            height="990"
+            style="width: 1920px; height: 990px"
+          ></canvas>
+        </div>
+        <div class="flex">
+          <div class="text">
+            Hello, I'm <span class="highlight">Leo Korsy</span>.
+            <br />
+            I'm a full-stack web developer.
+          </div>
+
+          <div class="button page-link first-btn" dest="about">
+            View my work
+            <i id="arrow-in-btn" class="mdi fas fa-arrow-right"></i>
+            <!-- <i class="fas fa-arrow-down"></i> -->
+          </div>
+
+          <nav class="flex desk">
+            <div class="link-wrap">
+              <div class="active page-link" dest="home">home</div>
+              <div class="page-link" dest="about">about</div>
+              <div class="page-link" dest="portfolio">portfolio</div>
+              <div class="page-link" dest="blog">blog</div>
+              <div class="page-link" dest="contact">contact</div>
+            </div>
+            <i class="mdi mdi-menu"></i>
+          </nav>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about">
+        <div class="container flex">
+          <div class="header waypoint" data-animation="slide-in-left">
+            ABOUT
+          </div>
+          <div
+            class="header-bar waypoint"
+            data-animation="slide-in-left"
+            data-delay=".5s"
+            style="animation-delay: 0.5s"
+          ></div>
+
+          <div class="flex row label-wrap">
+            <div class="flex row-gt-sm">
+              <div class="flex bullet-wrap">
+                <div class="hex-wrap waypoint" data-animation="flip-in-x">
+                  <div class="hexagon">
+                    <i class="fas fa-tachometer-alt"></i>
+                  </div>
+                </div>
+                <div class="waypoint" data-animation="fade-in">
+                  <div class="label bold">Fast</div>
+                  <div>
+                    Fast load times and lag free interaction, my highest
+                    priority.
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex bullet-wrap">
+                <div
+                  class="hex-wrap waypoint"
+                  data-animation="flip-in-x"
+                  data-delay=".2s"
+                  style="animation-delay: 0.2s"
+                >
+                  <div class="hexagon">
+                    <i class="fas fa-mobile-alt"></i>
+                  </div>
+                </div>
+                <div
+                  class="waypoint"
+                  data-animation="fade-in"
+                  data-delay=".2s"
+                  style="animation-delay: 0.2s"
+                >
+                  <div class="label bold">Responsive</div>
+                  <div>My layouts will work on any device, big or small.</div>
+                </div>
+              </div>
+            </div>
+            <div class="flex row-gt-sm">
+              <div class="flex bullet-wrap">
+                <div
+                  class="hex-wrap waypoint"
+                  data-animation="flip-in-x"
+                  data-delay=".4s"
+                  style="animation-delay: 0.4s"
+                >
+                  <div class="hexagon">
+                    <i class="far fa-lightbulb"></i>
+                  </div>
+                </div>
+                <div
+                  class="waypoint"
+                  data-animation="fade-in"
+                  data-delay=".4s"
+                  style="animation-delay: 0.4s"
+                >
+                  <div class="label bold">Intuitive</div>
+                  <div>Strong preference for easy to use, intuitive UX/UI.</div>
+                </div>
+              </div>
+
+              <div class="flex bullet-wrap">
+                <div
+                  class="hex-wrap waypoint"
+                  data-animation="flip-in-x"
+                  data-delay=".6s"
+                  style="animation-delay: 0.6s"
+                >
+                  <div class="hexagon">
+                    <i class="fas fa-rocket"></i>
+                  </div>
+                </div>
+                <div
+                  class="waypoint"
+                  data-animation="fade-in"
+                  data-delay=".6s"
+                  style="animation-delay: 0.6s"
+                >
+                  <div class="label bold">Dynamic</div>
+                  <div>
+                    Websites don't have to be static, I love making pages come
+                    to life.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skills-wrapper flex row-gt-sm">
+            <div
+              class="flex flex-50-gt-sm waypoint"
+              data-animation="slide-in-left"
+            >
+              <img src="images/pf_img_1.jpg" class="me" />
+              <!-- <div><img class="up-arrow" src="img/up-arrow.png"></div> -->
+              <div class="label bold">Who's this guy?</div>
+              <div>
+                <div class="info-title">
+                  I'm a Full-stack web Developer for
+                  <a
+                    class="highlight"
+                    href="https://media-gnm.com/"
+                    target="_blank"
+                    >GNM-Media group</a
+                  >
+                  in Tel Aviv, ISR.
+                </div>
+
+                <div class="info-body">
+                  Solution-driven web developer adept at contributing to highly
+                  collaborative work environment, finding solutions and
+                  determining customer satisfaction. Proven experience
+                  developing consumer-focused websites using HTML, CSS, JavaScript, Nodejs, etc.
+                . Built products for desktop users over 5+ years, meeting highest standards for web design,
+                  user experience, best practices and speed. Designed and
+                  developed web applications across multiple APIs, third-party
+                  integrations and databases.
+                </div>
+
+                <br />
+                <span class="page-link highlight" dest="contact"
+                  >Let's make something special.</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="flex flex-50-gt-sm waypoint bars-wrap"
+              data-animation="slide-in-right"
+            >
+              <div class="bar flex">
+                <div class="bar fill" style="width: 90%">
+                  <div class="tag bold flex">HTML</div>
+                </div>
+                <span>90%</span>
+              </div>
+              <div class="bar flex">
+                <div class="bar fill" style="width: 70%">
+                  <div class="tag bold flex">CSS</div>
+                </div>
+                <span>70%</span>
+              </div>
+
+              <div class="bar flex">
+                <div class="bar fill" style="width: 90%">
+                  <div class="tag bold flex">JavaScript</div>
+                </div>
+                <span>90%</span>
+              </div>
+              <div class="bar flex">
+                <div class="bar fill" style="width: 85%">
+                  <div class="tag bold flex">Vue</div>
+                </div>
+                <span>85%</span>
+              </div>
+              <div class="bar flex">
+                <div class="bar fill" style="width: 60%">
+                  <div class="tag bold flex">React</div>
+                </div>
+                <span>60%</span>
+              </div>
+              <div class="bar flex">
+                <div class="bar fill" style="width: 60%">
+                  <div class="tag bold flex">Angular</div>
+                </div>
+                <span>60%</span>
+              </div>
+
+              <div class="bar flex">
+                <div class="bar fill" style="width: 75%">
+                  <div class="tag bold flex">Node.js</div>
+                </div>
+                <span>75%</span>
+              </div>
+              <div class="bar flex">
+                <div class="bar fill" style="width: 50%">
+                  <div class="tag bold flex">PHP</div>
+                </div>
+                <span>50%</span>
+              </div>
+              <div class="bar flex">
+                <div class="bar fill" style="width: 60%">
+                  <div class="tag bold flex">MYSQL</div>
+                </div>
+                <span>60%</span>
+              </div>
+              <div class="bar flex">
+                <div class="bar fill" style="width: 50%">
+                  <div class="tag bold flex">MONGO</div>
+                </div>
+                <span>50%</span>
+              </div>
+              <!-- <div class="bar flex">
+                <div class="bar fill" style="width: 50%">
+                  <div class="tag bold flex">UI Design</div>
+                </div>
+                <span>50%</span>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO -->
+      <section class="flex" id="portfolio">
+        <div class="header waypoint" data-animation="slide-in-right">
+          PROJECTS
+        </div>
+        <div
+          class="header-bar waypoint"
+          data-animation="slide-in-right"
+          data-delay=".3s"
+          style="animation-delay: 0.3s"
+        ></div>
+
+        <div class="filter-wrap waypoint" data-animation="fade-in">
+          <div class="flex row">
+            <div class="filter active" data-filter="all">ALL</div>
+            <div class="filter" data-filter=".vue">Vuejs/PHP</div>
+            <div class="filter" data-filter=".react">React-JS/NodeJs</div>
+            <div class="filter" data-filter=".anguilar">Anguilar/NodeJs</div>
+          </div>
+          <div class="float-bar" style="left: 25px; width: 116px">
+            <div class="flex row" style="left: -25px">
+              <div class="filter active" data-filter="all">ALL</div>
+              <div class="filter" data-filter=".vue">Vuejs/PHP</div>
+              <div class="filter" data-filter=".react">React-JS/NodeJs</div>
+              <div class="filter" data-filter=".anguilar">Anguilar/NodeJs</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="gallery" class="container flex row wrap waypoint">
+          <div
+            class="mix vue"
+            data-my-order="1"
+            style="display: inline-block"
+            data-bound=""
+          >
+            <div>
+              <div class="card"></div>
+              <div class="text">
+                <div class="bold">CRM</div>
+                <span class="highlight">Vuejs / PHP / MYSQL</span>
+              </div>
+              <div class="button" id="ordering">LEARN MORE</div>
+            </div>
+          </div>
+
+          <div
+            class="mix react"
+            data-my-order="1"
+            style="display: inline-block"
+            data-bound=""
+          >
+            <div>
+              <div class="card"></div>
+              <div class="text">
+                <div class="bold">Travel blog</div>
+                <span class="highlight">React JS / NodeJS / MYSQL</span>
+              </div>
+              <div class="button" id="travel">LEARN MORE</div>
+            </div>
+          </div>
+
+          <div
+            class="mix anguilar"
+            data-my-order="1"
+            style="display: inline-block"
+            data-bound=""
+          >
+            <div>
+              <div class="card"></div>
+              <div class="text">
+                <div class="bold">E-commerce</div>
+                <span class="highlight">Anguilar / NodeJs / MONGO</span>
+              </div>
+              <div class="button" id="mdx">LEARN MORE</div>
+            </div>
+          </div>
+
+          <!-- <div
+            class="mix js"
+            data-my-order="1"
+            style="display: inline-block"
+            data-bound=""
+          >
+            <div>
+              <div class="card"></div>
+              <div class="text">
+                <div class="bold">Roambi</div>
+                <span class="highlight">JavaScript</span>
+              </div>
+              <div class="button" id="roambi">LEARN MORE</div>
+            </div>
+          </div>
+
+          <div
+            class="mix rails"
+            data-my-order="1"
+            style="display: inline-block"
+            data-bound=""
+          >
+            <div>
+              <div class="card"></div>
+              <div class="text">
+                <div class="bold">Walker Tracker</div>
+                <span class="highlight">JS / Ruby on Rails</span>
+              </div>
+              <div class="button" id="walker">LEARN MORE</div>
+            </div>
+          </div>
+
+          <div
+            class="mix js"
+            data-my-order="1"
+            style="display: inline-block"
+            data-bound=""
+          >
+            <div>
+              <div class="card"></div>
+              <div class="text">
+                <div class="bold">MY STAND</div>
+                <span class="highlight">JS / Node.js on Sails</span>
+              </div>
+              <div class="button" id="mystand">LEARN MORE</div>
+            </div>
+          </div>
+
+          <div
+            class="mix js"
+            data-my-order="1"
+            style="display: inline-block"
+            data-bound=""
+          >
+            <div>
+              <div class="card"></div>
+              <div class="text">
+                <div class="bold">NEVER SURRENDER</div>
+                <span class="highlight">JavaScript</span>
+              </div>
+              <div class="button" id="never">LEARN MORE</div>
+            </div>
+          </div>
+
+          <div
+            class="mix rails"
+            data-my-order="1"
+            style="display: inline-block"
+            data-bound=""
+          >
+            <div>
+              <div class="card"></div>
+              <div class="text">
+                <div class="bold">Powur</div>
+                <span class="highlight">Angular / Ruby on Rails</span>
+              </div>
+              <div class="button" id="powur">LEARN MORE</div>
+            </div>
+          </div>
+
+          <div
+            class="mix js"
+            data-my-order="1"
+            style="display: inline-block"
+            data-bound=""
+          >
+            <div>
+              <div class="card"></div>
+              <div class="text">
+                <div class="bold">The Mall</div>
+                <span class="highlight">React.js / Node</span>
+              </div>
+              <div class="button" id="themall">LEARN MORE</div>
+            </div>
+          </div> -->
+        </div>
+      </section>
+
+      <!-- BLOG -->
+      <section id="blog">
+        <div class="container flex">
+          <div class="header waypoint" data-animation="slide-in-left">BLOG</div>
+          <div
+            class="header-bar waypoint"
+            data-animation="slide-in-left"
+            data-delay=".5s"
+            style="animation-delay: 0.5s"
+          ></div>
+
+          <div class="flex row wrap">
+            <div class="flex row-gt-sm">
+              <a
+                href="https://www.bacancytechnology.com/blog/vue-js-best-practices-2020"
+                target="_blank"
+              >
+                <div class="blog-wrap waypoint" data-animation="fade-in">
+                  <div class="fade-wrap">
+                    <div class="thumb" id="thumb-1"></div>
+                    <div class="label bold">
+                      Vue.js Best Practices. Modular Application.
+                    </div>
+                    <div class="date">May 14, 2020</div>
+                    <div class="bar"></div>
+                    <div class="text">
+                      When it comes to modern front-end development, Vue.js
+                      continues to become more and more ...
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a
+                href="https://www.thinkful.com/learn/javascript-best-practices-1/#Make-it-Understandable"
+                target="_blank"
+              >
+                <div
+                  class="blog-wrap waypoint"
+                  data-animation="fade-in"
+                  data-delay=".2s"
+                  style="animation-delay: 0.2s"
+                >
+                  <div class="fade-wrap">
+                    <div class="thumb" id="thumb-2"></div>
+                    <div class="label bold">
+                      Javascript best practices. Christian Heilmann
+                    </div>
+                    <div class="date">May 19, 2017</div>
+                    <div class="bar"></div>
+                    <div class="text">
+                      Though JavaScript has a few notoriously tricky features,
+                      it's more important than ....
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="flex row-gt-sm">
+              <a
+                href="https://www.sitepoint.com/21-steps-to-becoming-a-successful-web-developer/"
+                target="_blank"
+              >
+                <div
+                  class="blog-wrap waypoint"
+                  data-animation="fade-in"
+                  data-delay=".4s"
+                  style="animation-delay: 0.4s"
+                >
+                  <div class="fade-wrap">
+                    <div class="thumb" id="thumb-3"></div>
+                    <div class="label bold">
+                      21 Steps to Becoming a Successful Web Developer
+                    </div>
+                    <div class="date">February 7, 2017</div>
+                    <div class="bar"></div>
+                    <div class="text">
+                      With the web development industry booming, many are asking
+                      the question: How do I become a...
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a
+                href="https://www.budibase.com/blog/web-development-tools/"
+                target="_blank"
+              >
+                <div
+                  class="blog-wrap waypoint"
+                  data-animation="fade-in"
+                  data-delay=".6s"
+                  style="animation-delay: 0.6s"
+                >
+                  <div class="fade-wrap">
+                    <div class="thumb" id="thumb-4"></div>
+                    <div class="label bold">
+                      Web development tools you must know about in 2020.
+                    </div>
+                    <div class="date">Feb 12, 2020</div>
+                    <div class="bar"></div>
+                    <div class="text">
+                      By:Joe Johnston.There are thousands of web development
+                      tools. Some great, some bad. Below, I....
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <svg
+          preserveAspectRatio="none"
+          viewBox="0 0 100 102"
+          height="75"
+          width="100%"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          class="svgcolor-light"
+        >
+          <path d="M0 0 L50 100 L100 0 Z" fill="white" stroke="white"></path>
+        </svg>
+        <div class="container flex">
+          <div class="header waypoint" data-animation="slide-in-left">
+            CONTACT
+          </div>
+          <div
+            class="header-bar waypoint"
+            data-animation="slide-in-right"
+            data-delay=".25s"
+            style="animation-delay: 0.25s"
+          ></div>
+          <div
+            class="highlight waypoint"
+            data-animation="slide-in-right"
+            data-delay=".5s"
+            style="animation-delay: 0.5s"
+          >
+            Have a question or want to work together?
+          </div>
+          <form
+            class="waypoint"
+            data-animation="pop-in"
+            data-delay=".5s"
+            id="contact-form"
+            style="animation-delay: 0.5s"
+          >
+            <input placeholder="Name" type="text" name="name" required="" />
+            <input
+              placeholder="Enter email"
+              type="email"
+              name="email"
+              required=""
+            />
+            <textarea
+              placeholder="Your Message"
+              type="text"
+              name="message"
+            ></textarea>
+            <div id="success">
+              <div>
+                Your message was sent successfully. Thanks!<span
+                  id="close"
+                  class="mdi mdi-close"
+                ></span>
+              </div>
+            </div>
+            <input class="button" type="submit" id="submit" value="SUBMIT" />
+          </form>
+        </div>
+      </section>
+
+      <footer>
+        <!-- <i class="mdi mdi-chevron-double-up page-link" dest="home"></i> -->
+        <i class="fas fa-chevron-up page-link" dest="home"></i>
+
+        <div class="icon-wrap flex row">
+          <a
+            href="https://il.linkedin.com/in/lev-korsunsky-36465471"
+            target="_blank"
+          >
+            <div class="flex icon" id="icon-2">
+              <i class="fab fa-linkedin"></i>
+            </div>
+          </a>
+          <a
+            href="https://www.facebook.com/people/Lev-Korsunsky/100000993145425"
+            target="_blank"
+          >
+            <div class="flex icon" id="icon-3">
+              <i class="fab fa-facebook-square"></i>
+            </div>
+          </a>
+          <a href="https://www.instagram.com/levkorsy/" target="_blank">
+            <div class="flex icon" id="icon-4">
+              <i class="fab fa-instagram"></i>
+            </div>
+          </a>
+          <a href="https://github.com/levkorsy" target="_blank">
+            <div class="flex icon" id="icon-5">
+              <i class="fab fa-github"></i>
+            </div>
+          </a>
+        </div>
+        <div class="info-box">
+          <div class="footnote">
+            LEO KORSY <span class="highlight" id="copyright">©2020</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div id="preload">
+      <img src="/images/laptop-bg3.png" />
+      <img src="img/slides/ordering-1.jpg" />
+      <!-- <img src="img/filler.jpg" />
+      <img src="img/thumb-1.jpg" />
+      <img src="img/thumb-2.jpg" />
+      <img src="img/thumb-3.jpg" />
+      <img src="img/thumb-4.jpg" />
+      <img src="img/thumb-5.jpg" />
+      <img src="img/thumb-6.jpg" />
+      <img src="img/blog-1.jpg" />
+      <img src="img/blog-2.jpg" />
+      <img src="img/blog-3.jpg" />
+      <img src="img/blog-4.jpg" />
+      <img src="img/slides/discover-0.jpg" />
+      <img src="img/slides/discover-1.jpg" />
+      <img src="img/slides/discover-2.jpg" />
+      <img src="img/slides/ordering-0.jpg" />
+      
+      <img src="img/slides/ordering-2.jpg" />
+      <img src="img/slides/newrelic-0.jpg" />
+      <img src="img/slides/newrelic-1.jpg" />
+      <img src="img/slides/newrelic-2.jpg" />
+      <img src="img/slides/mystand-0.jpg" />
+      <img src="img/slides/mystand-1.jpg" />
+      <img src="img/slides/mystand-2.jpg" />
+      <img src="img/slides/never-0.jpg" />
+      <img src="img/slides/never-1.jpg" />
+      <img src="img/slides/never-2.jpg" />
+      <img src="img/slides/powur-0.jpg" />
+      <img src="img/slides/powur-1.jpg" />
+      <img src="img/slides/powur-2.jpg" />
+      <img src="img/slides/roambi-0.jpg" />
+      <img src="img/slides/roambi-1.jpg" />
+      <img src="img/slides/roambi-2.jpg" />
+      <img src="img/slides/themall-0.jpg" />
+      <img src="img/slides/themall-1.jpg" />
+      <img src="img/slides/themall-2.jpg" />
+      <img src="img/slides/walker-0.jpg" />
+      <img src="img/slides/walker-1.jpg" />
+      <img src="img/slides/walker-2.jpg" /> -->
+    </div>
+
+    <script src="/canvas.js"></script>
+  </body>
+</html>
